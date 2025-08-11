@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${tyrian.variable} antialiased relative min-h-screen bg-tyrian-hero text-white`}
       >
         <Header />
-        <main className='container-full'>{children}</main>
+        <main className=''>{children}</main>
         <Footer />
       </body>
     </html>

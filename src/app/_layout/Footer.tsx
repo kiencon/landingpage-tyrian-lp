@@ -1,3 +1,3 @@
-const Footer = () => <p>Footer</p>;
+const Footer = () => <p className='hidden'>Footer</p>;
 
 export default Footer;

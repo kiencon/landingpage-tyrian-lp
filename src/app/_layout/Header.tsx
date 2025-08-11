@@ -17,12 +17,9 @@ const navItem = [
 
 const Header = () => {
   return (
-    <header className='my-8'>
+    <header className='py-8'>
       <div className='container-full flex items-center justify-around'>
         <div className=''>
-          {/* <h1 className='text-5xl font-black text-tyrian-purple-200 drop-shadow-[0_0_10px_#cc94e5]'>
-            Tyrian <span className='text-tyrian-purple-400'>RP</span>
-          </h1> */}
           <h1 className='text-4xl text-white drop-shadow-[0_0_8px_#ac67c6] cursor-pointer'>
             Tyrian <span className='text-[#cc94e5]'>RP</span>
           </h1>
