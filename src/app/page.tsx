@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <>
+    <div className='bg-black'>
       <div className='hero'>
         <div
           className='bg cursor-pointer'
@@ -43,8 +43,9 @@ export default function Home() {
           </section>
         </div>
       </div>
-      <div className='pt-12 flex justify-center items-center rounded-lg max-w-[1600px] mx-auto'>
-        <div className='w-full xl:w-1/2 z-10'>
+      <div className='h-24 transition-gradient'></div>
+      <div className='flex justify-center items-center rounded-lg mx-auto relative bg-[#0e0618] container-full'>
+        <div className='w-full xl:w-1/2 z-10 container-full'>
           <div className='mx-auto px-8 rounded-3xl mb-2 relative w-full'>
             <iframe
               className='rounded-3xl'
@@ -98,7 +99,7 @@ export default function Home() {
         <div className='w-full xl:w-1/2 flex flex-col items-center z-10'>
           <img className='z-20' src='/background3.png' alt='' />
           <div className='flex items-end justify-center z-20 w-4/5'>
-            <div className='text-white text-2xl'>
+            <div className='text-white text-xl'>
               <span>Tyrian</span>
               <span>
                 {' '}
@@ -113,6 +114,55 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+      <div className='h-24 transition-gradient-2'></div>
+      <div className='container-full flex'>
+        <div>
+          <img src='/guide-box-img.png' alt='guide box' />
+        </div>
+        <div className='text-xl text-white'>
+          <p>
+            <span className='mx-2'>BẠN LÀ NGƯỜI MỚI?</span>
+            <span className='text-[#cc94e5]'>
+              THAM GIA SERVER NGAY CHỈ VỚI 2 BƯỚC ĐƠN GIẢN
+            </span>
+          </p>
+          <div className='steps'>
+            <div className='step-box'>
+              <div className='step-number'>1</div>
+              <div className='step-content'>
+                <h3 className='text-xl'>Tải game GTA 5</h3>
+                <p>
+                  Nếu bạn đã tải hoặc sở hữu game, vui lòng chuyển qua bước 2
+                </p>
+              </div>
+            </div>
+            <div className='arrow'></div>
+            <div className='step-box'>
+              <div className='step-number'>2</div>
+              <div className='step-content'>
+                <h3 className='text-xl'>Tải launcher GTA5VN</h3>
+                <p>và trải nghiệm ngay thôi!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='container-full pt-24'>
+        <h3 className='text-2xl text-white text-center'>
+          Connection socially with Tyrian
+        </h3>
+        <div className='flex justify-around mt-24'>
+          <div className='w-[20%]'>
+            <img src='/ytb_logo.svg' alt='youtube' />
+          </div>
+          <div className='w-[20%]'>
+            <img src='/tt_logo.svg' alt='tiktok' />
+          </div>
+          <div className='w-[20%]'>
+            <img src='/discord_logo.svg' alt='discord' />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
