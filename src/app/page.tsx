@@ -1,28 +1,29 @@
-'use client';
-
-import { useState } from 'react';
-
 /* eslint-disable @next/next/no-img-element */
-export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
+import Hero from '@/components/Hero';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tyrian | Role play server',
+  description: `Tyrian role play server`,
+  robots: 'index,follow',
+  keywords: ['Tyrian', 'fivem', 'roleplay', 'fivem', 'launcher'],
+  openGraph: {
+    type: 'website',
+    url: 'https://gta.vsondev.com',
+    title: 'Tyrian | Role play server',
+    description: `Tyrian role play server`,
+    siteName: 'Tyrian role play',
+  },
+  twitter: {
+    title: 'Tyrian | Role play server',
+  },
+  icons: '/logo.webp',
+};
+
+const Home = () => {
   return (
     <div className='bg-black'>
-      <div className='hero'>
-        <div
-          className='bg cursor-pointer'
-          style={{ filter: isHovered ? 'none' : 'saturate(0) brightness(30%)' }}
-        ></div>
-        <div className='container-full'>
-          <section className='pt-48'>
-            <div
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <img src='/tyrian-job-all-city.png' alt='logo' />
-            </div>
-          </section>
-        </div>
-      </div>
+      <Hero />
       <div className='h-24 transition-gradient'></div>
       <div className='flex justify-center items-center rounded-lg mx-auto relative bg-[#0e0618] container-full'>
         <div className='w-full xl:w-1/2 z-10 container-full'>
@@ -34,7 +35,6 @@ export default function Home() {
               src='https://www.youtube.com/embed/AzyWvLxhurs?si=aXvyWUC0iesugOyf'
               title='YouTube video player'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              aria-label='To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings'
             ></iframe>
             <div className='grid grid-cols-2 gap-2 rounded-lg container container-two mx-auto px-8 mt-4'>
               <div className='relative group cursor-pointer'>
@@ -145,4 +145,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
