@@ -81,7 +81,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(/intro1.jpg);
+  background-image: url(/main-background-tyrian-city.jpg);
   background-size: cover;
   filter: saturate(0) brightness(30%);
   opacity: 0.8;

@@ -21,7 +21,7 @@ const Header = () => {
       <div className='container-full flex items-center justify-around'>
         <div className=''>
           <h1 className='text-4xl text-white drop-shadow-[0_0_8px_#ac67c6] cursor-pointer'>
-            Tyrian <span className='text-[#cc94e5]'>RP</span>
+            <img src='/logo.webp' alt='tyrian' width={90} />
           </h1>
         </div>
         <nav>

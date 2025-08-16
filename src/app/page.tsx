@@ -18,27 +18,7 @@ export default function Home() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              <img src='/logo_cover.png' alt='logo' />
-            </div>
-            <p className='text-[#cc94e5] my-12 uppercase font-semibold text-3xl '>
-              LOS SANTOS - Roleplay Server
-            </p>
-            <div className='flex text-white font-semibold text-xl'>
-              <div className='btn mr-12'>
-                <span>Tổng</span>
-                <span>1396</span>
-              </div>
-              <div className='btn mr-12'>
-                <span>Online</span>
-                <span>96</span>
-              </div>
-              <div className='btn mr-12'>
-                <span>Server</span>
-                <span>LOS SANTOS</span>
-              </div>
-            </div>
-            <div className='mt-4 flex font-semibold text-xl'>
-              <button className='btn'>Chơi Ngay</button>
+              <img src='/tyrian-job-all-city.png' alt='logo' />
             </div>
           </section>
         </div>
@@ -116,8 +96,8 @@ export default function Home() {
       </div>
       <div className='h-24 transition-gradient-2'></div>
       <div className='container-full flex'>
-        <div>
-          <img src='/guide-box-img.png' alt='guide box' />
+        <div className='w-[370px]'>
+          <img src='/bilui.webp' alt='guide box' />
         </div>
         <div className='text-xl text-white'>
           <p>
