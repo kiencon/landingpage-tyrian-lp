@@ -41,7 +41,7 @@ const Header = () => {
         <div className='w-[135px]'>
           <Link
             href={'#'}
-            className='text-[#cc94e5] hover:text-[#eabfec] text-2xl uppercase border btn-coin btn-prallel'
+            className='text-[#cc94e5] hover:text-[#eabfec] uppercase border btn-coin btn-prallel'
           >
             <span>Nạp coin</span>
           </Link>
