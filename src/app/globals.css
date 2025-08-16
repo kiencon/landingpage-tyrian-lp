@@ -194,6 +194,11 @@ body {
   );
   min-width: 260px;
   height: 130px;
+  cursor: pointer;
+}
+
+.step-box:hover {
+  background: linear-gradient(to right, #3d1cb8, #4c0f64);
 }
 
 .step-number {
