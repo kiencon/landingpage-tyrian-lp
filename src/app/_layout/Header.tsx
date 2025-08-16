@@ -10,7 +10,7 @@ const navItem = [
     link: '/',
   },
   {
-    title: 'đăng ký',
+    title: 'đăng nhập',
     link: '/',
   },
 ];
@@ -41,9 +41,9 @@ const Header = () => {
         <div className='w-[135px]'>
           <Link
             href={'#'}
-            className='text-[#cc94e5] hover:text-[#eabfec] text-2xl uppercase border border border-violet-800 p-2 rounded'
+            className='text-[#cc94e5] hover:text-[#eabfec] text-2xl uppercase border btn-coin btn-prallel'
           >
-            Nạp coin
+            <span>Nạp coin</span>
           </Link>
         </div>
       </div>

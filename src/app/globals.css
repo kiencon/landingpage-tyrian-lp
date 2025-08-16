@@ -11,6 +11,11 @@
   --neon-color: #461e57; /* pick your glow color */
   --neon-bright: 1.15;
   --neon-contrast: 1.35;
+  --mc-bg-1: #3e1a81; /* tím đậm bên dưới */
+  --mc-bg-2: #5a28b1; /* tím sáng hơn phía trên */
+  --mc-border: #ffb02e; /* viền vàng/cam */
+  --mc-rim: #4b1f86; /* viền tím ngoài */
+  --mc-text: #ffffff;
 }
 
 /* hero background tím + glow trung tâm và hai bên */
@@ -236,4 +241,84 @@ body {
 
 .arrow::after {
   left: 8px; /* khoảng cách giữa 2 mũi tên */
+}
+
+.btn-coin {
+  /* layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  min-width: 150px;
+
+  /* kiểu chữ */
+  font: 800 15px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--mc-text);
+
+  /* nền + bo góc */
+  background: linear-gradient(180deg, var(--mc-bg-2), var(--mc-bg-1));
+  border-radius: 14px;
+
+  /* viền vàng (sát mép) */
+  border: 3px solid var(--mc-border);
+
+  /* hiệu ứng chiều sâu + viền tím ngoài */
+  box-shadow: 0 0 0 6px var(--mc-rim),
+    /* viền tím ngoài */ 0 10px 16px rgba(0, 0, 0, 0.25),
+    /* đổ bóng mềm */ inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    /* highlight nhẹ phía trên */ inset 0 -6px 12px rgba(0, 0, 0, 0.35); /* bóng trong đáy */
+
+  /* tương tác */
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+/* Hover: sáng hơn và “nổi” lên một chút */
+.btn-coin:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 6px var(--mc-rim), 0 14px 22px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.35);
+  transform: skew(-15deg);
+}
+
+/* Active: ấn xuống */
+.btn-coin:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 6px var(--mc-rim), 0 6px 10px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 rgba(255, 255, 255, 0), inset 0 -2px 6px rgba(0, 0, 0, 0.45);
+  transform: skew(-15deg);
+}
+
+/* Tuỳ chọn: loại bỏ viền focus mặc định và thay bằng halo */
+.btn-coin:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 6px var(--mc-rim), 0 0 0 10px rgba(255, 176, 46, 0.45),
+    0 10px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.35);
+  transform: skew(-15deg);
+}
+
+.btn-prallel {
+  display: inline-block;
+  padding: 12px 32px;
+  font: 800 15px/1.2 sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #11022a, #3e1a81);
+  border: 3px solid #ffb02e;
+  box-shadow: 0 0 0 6px #4b1f86, 0 10px 16px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  /* làm hình thoi */
+  transform: skew(-15deg);
+}
+
+/* chống skew chữ bên trong */
+.btn-prallel span {
+  display: inline-block;
+  transform: skew(15deg);
 }

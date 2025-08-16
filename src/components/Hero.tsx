@@ -2,6 +2,13 @@
 
 import { useState } from 'react';
 
+const images = [
+  '/tyrian-job-ems.png',
+  '/tyrian-job-PD.png',
+  '/tyrian-job-crim.png',
+  '/tyrian-job-worker.png',
+];
+
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [displayLogo, setDisplayLogo] = useState(false);
@@ -21,41 +28,32 @@ const Hero = () => {
             onMouseLeave={() => setIsHovered(false)}
             className='relative flex justify-around'
           >
-            <div>
-              <img
-                className='block rounded-3xl'
-                width={300}
-                src={'/tyrian-job-ems.png'}
-                alt='tyrian-job-ems'
-              />
-            </div>
-            <div className='relative w-[300px]'>
-              <img
-                className='block rounded-3xl absolute w-full -top-[50px]'
-                width={300}
-                src={'/tyrian-job-PD.png'}
-                alt='tyrian-job-PD'
-              />
-            </div>
-            <div className='relative w-[300px]'>
-              <img
-                className='block rounded-3xl absolute w-full -top-[50px]'
-                width={300}
-                src={'/tyrian-job-crim.png'}
-                alt='tyrian-job-crim'
-              />
-            </div>
-            <div>
-              <img
-                className='block rounded-3xl'
-                width={300}
-                src={'/tyrian-job-worker.png'}
-                alt='tyrian-job-worker'
-              />
-            </div>
+            {images.map((e, i) => (
+              <div key={e} className='relative w-[300px]'>
+                <img
+                  className={`block rounded-3xl ${
+                    i === 1 || i === 2 ? 'absolute w-full -top-[50px]' : ''
+                  }`}
+                  onMouseEnter={() => {
+                    setIsHovered(true);
+                    setDisplayLogo(true);
+                  }}
+                  onMouseLeave={() => setIsHovered(false)}
+                  style={{
+                    transition: '.5s',
+                    filter: displayLogo
+                      ? 'none'
+                      : 'saturate(0) brightness(30%)',
+                  }}
+                  width={300}
+                  src={e}
+                  alt={e}
+                />
+              </div>
+            ))}
           </div>
           <div
-            style={{ transition: '1s', bottom: `${displayLogo ? '0' : ''}` }}
+            style={{ transition: '0.5s', bottom: `${displayLogo ? '0' : ''}` }}
             className={`absolute -bottom-[30px] left-[50%] -translate-x-[50%] ease-in ${
               displayLogo ? '' : 'opacity-0'
             }`}
