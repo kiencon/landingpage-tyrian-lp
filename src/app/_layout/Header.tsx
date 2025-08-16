@@ -6,10 +6,6 @@ const navItem = [
     link: '/',
   },
   {
-    title: 'luật lệ',
-    link: '/',
-  },
-  {
     title: 'đăng nhập',
     link: '/',
   },
