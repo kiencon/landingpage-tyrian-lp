@@ -130,22 +130,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='container-full pt-24'>
-        <h3 className='text-2xl text-white text-center'>
-          Connection socially with Tyrian
-        </h3>
-        <div className='flex justify-around mt-24'>
-          <div className='w-[20%]'>
-            <img src='/ytb_logo.svg' alt='youtube' />
-          </div>
-          <div className='w-[20%]'>
-            <img src='/tt_logo.svg' alt='tiktok' />
-          </div>
-          <div className='w-[20%]'>
-            <img src='/discord_logo.svg' alt='discord' />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
