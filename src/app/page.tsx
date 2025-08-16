@@ -95,11 +95,11 @@ const Home = () => {
         </div>
       </div>
       <div className='h-24 transition-gradient-2'></div>
-      <div className='container-full flex'>
+      <div className='container-full flex items-center'>
         <div className='w-[370px]'>
           <img src='/bilui.webp' alt='guide box' />
         </div>
-        <div className='text-xl text-white'>
+        <div className='text-2xl text-white'>
           <p>
             <span className='mx-2'>BẠN LÀ NGƯỜI MỚI?</span>
             <span className='text-[#cc94e5]'>
@@ -110,8 +110,8 @@ const Home = () => {
             <div className='step-box'>
               <div className='step-number'>1</div>
               <div className='step-content'>
-                <h3 className='text-xl'>Tải game GTA 5</h3>
-                <p>
+                <h3 className='text-2xl'>Tải game GTA 5</h3>
+                <p className='text-xl'>
                   Nếu bạn đã tải hoặc sở hữu game, vui lòng chuyển qua bước 2
                 </p>
               </div>
@@ -120,8 +120,8 @@ const Home = () => {
             <div className='step-box'>
               <div className='step-number'>2</div>
               <div className='step-content'>
-                <h3 className='text-xl'>Tải launcher GTA5VN</h3>
-                <p>và trải nghiệm ngay thôi!</p>
+                <h3 className='text-2xl'>Tải launcher GTA5VN</h3>
+                <p className='text-xl'>và trải nghiệm ngay thôi!</p>
               </div>
             </div>
           </div>

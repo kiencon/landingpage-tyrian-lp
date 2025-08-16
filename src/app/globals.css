@@ -188,6 +188,7 @@ body {
     0 100%
   );
   min-width: 260px;
+  height: 130px;
 }
 
 .step-number {
