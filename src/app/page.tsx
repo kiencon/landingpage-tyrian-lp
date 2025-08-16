@@ -40,7 +40,7 @@ const Home = () => {
               <div className='relative group cursor-pointer'>
                 <div className=''>
                   <img
-                    src='/gameplay15.jpg'
+                    src='/2.png'
                     className='object-cover rounded-tl-3xl'
                     alt='playgame'
                   ></img>
@@ -49,7 +49,7 @@ const Home = () => {
               <div className='relative group cursor-pointer'>
                 <div className=''>
                   <img
-                    src='/gameplay15.jpg'
+                    src='/3.png'
                     className='object-cover rounded-tr-3xl'
                     alt='playgame'
                   ></img>
@@ -58,7 +58,7 @@ const Home = () => {
               <div className='relative group cursor-pointer'>
                 <div className=''>
                   <img
-                    src='/gameplay15.jpg'
+                    src='/4.png'
                     className='object-cover rounded-bl-3xl'
                     alt='playgame'
                   ></img>
@@ -67,7 +67,7 @@ const Home = () => {
               <div className='relative group cursor-pointer'>
                 <div className=''>
                   <img
-                    src='/gameplay15.jpg'
+                    src='/1.png'
                     className='object-cover rounded-br-3xl'
                     alt='playgame'
                   ></img>
@@ -77,7 +77,7 @@ const Home = () => {
           </div>
         </div>
         <div className='w-full xl:w-1/2 flex flex-col items-center z-10'>
-          <img className='z-20' src='/background3.png' alt='' />
+          <img className='z-20' src='/tyrian-2.png' alt='' />
           <div className='flex items-end justify-center z-20 w-4/5'>
             <div className='text-white text-xl'>
               <span>Tyrian</span>

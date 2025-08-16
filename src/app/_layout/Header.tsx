@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className='py-8'>
       <div className='container-full flex items-center justify-around'>
-        <div className=''>
+        <div className='w-[135px]'>
           <h1 className='text-4xl text-white drop-shadow-[0_0_8px_#ac67c6] cursor-pointer'>
             <img src='/logo.webp' alt='tyrian' width={90} />
           </h1>
@@ -38,15 +38,12 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <div>
-          <Link href={'#'} className='text-white text-2xl uppercase mx-4'>
-            Donate
-          </Link>
+        <div className='w-[135px]'>
           <Link
             href={'#'}
             className='text-[#cc94e5] hover:text-[#eabfec] text-2xl uppercase border border border-violet-800 p-2 rounded'
           >
-            Mua coin
+            Nạp coin
           </Link>
         </div>
       </div>
