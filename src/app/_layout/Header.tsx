@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Link from 'next/link';
 import { isLoggedIn } from './helper';
 import SignOut from './Signout';

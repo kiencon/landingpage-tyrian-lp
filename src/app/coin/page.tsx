@@ -1,6 +1,7 @@
+import { authOptions } from '@/lib/authOptions';
+import { ISession } from '@/type';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
-import { authOptions } from '../api/auth/[...nextauth]/route';
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
@@ -14,7 +15,7 @@ export default async function Dashboard() {
   }
   return (
     <div className='text-3xl text-white text-center'>
-      Hello {(session as any).username}!
+      Hello {(session as ISession).username}!
     </div>
   );
 }

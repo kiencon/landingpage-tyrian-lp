@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 const Footer = () => (
   <>
     <div className='container-full py-24'>
