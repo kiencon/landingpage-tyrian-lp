@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
+    "nano": "^10.1.4",
+    "nanoid": "^5.1.5",
     "next": "15.4.6",
     "next-auth": "^4.24.11",
     "react": "19.1.0",

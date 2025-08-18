@@ -85,12 +85,14 @@ const Home = () => {
                 <span>Tyrian</span>
                 <span>
                   {' '}
-                  là một cơ hội độc nhất để bạn hòa mình vào một vũ trụ ảo và
-                  nhập vai theo những quy tắc giống như cuộc sống thực. Trở
-                  thành chính trị gia, gangster, doanh nhân, tài xế taxi, công
-                  nhân nhà máy, cảnh sát hoặc bất kỳ vai trò nào khác. Chúng tôi
-                  không có giới hạn, bạn hoàn toàn tự do chọn con đường của mình
-                  và tạo nên câu chuyện riêng trong thế giới ảo này!
+                  Tyrian mở ra một hành trình mới ở Los Santos, nơi bạn được
+                  bước chân vào một thế giới ảo sống động như đời thật. Tại đây,
+                  bạn có thể thử sức ở bất kỳ vai trò nào: từ doanh nhân thành
+                  đạt, tài xế rong ruổi khắp phố, công nhân bình dị, đến
+                  gangster nguy hiểm hay cảnh sát bảo vệ trật tự. Mọi lựa chọn
+                  đều nằm trong tay bạn – không có giới hạn, không có kịch bản
+                  cố định. Hãy tự mình vẽ nên câu chuyện, xây dựng số phận và để
+                  dấu ấn riêng trong thành phố Los Santos tại Tyrian!
                 </span>
               </div>
             </div>

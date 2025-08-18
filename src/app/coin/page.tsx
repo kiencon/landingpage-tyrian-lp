@@ -1,5 +1,5 @@
+import Coin from '@/components/Coin';
 import { authOptions } from '@/lib/authOptions';
-import { ISession } from '@/type';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
@@ -15,7 +15,7 @@ export default async function Dashboard() {
   }
   return (
     <div className='text-3xl text-white text-center'>
-      Hello {(session as ISession).username}!
+      <Coin />
     </div>
   );
 }
