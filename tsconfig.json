@@ -22,6 +22,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/lib/backend/model/connection.ts",
+    "src/lib/backend/model/Caseopening.ts",
+    "src/lib/backend/coin.ts"
+  ],
   "exclude": ["node_modules"]
 }

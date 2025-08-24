@@ -5,3 +5,10 @@ export interface ISession extends Session {
   discordId: string;
   username: string;
 }
+
+export interface IHistory {
+  id: number;
+  citizenid: string;
+  money: string;
+  createdAt: string;
+}

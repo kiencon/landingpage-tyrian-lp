@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { ISession } from '@/type';
 import Link from 'next/link';
 import { isLoggedIn } from './helper';
 import SignOut from './Signout';
 
 const Header = async () => {
-  const isAuth = await isLoggedIn();
+  const admins = JSON.parse(process.env.ADMINS || '[]') as unknown as string[];
+  const isAuth = (await isLoggedIn()) as unknown as ISession;
+  const isAdmin = admins.includes(isAuth?.discordId);
   return (
     <header className='py-8'>
       <div className='container-full flex items-center justify-around'>
@@ -34,12 +37,22 @@ const Header = async () => {
               <li>
                 <Link
                   className='hover:text-purple-400 text-white text-2xl text-tyrian-purple-300/90 uppercase cursor-pointer duration-300 font-semibold text-center py-1 px-6'
-                  href={'/'}
+                  href={'/login'}
                 >
                   đăng nhập
                 </Link>
               </li>
             )}
+            {isAdmin ? (
+              <li>
+                <Link
+                  className='hover:text-purple-400 text-white text-2xl text-tyrian-purple-300/90 uppercase cursor-pointer duration-300 font-semibold text-center py-1 px-6'
+                  href={'/add-coin'}
+                >
+                  Nạp tiền
+                </Link>
+              </li>
+            ) : null}
           </ul>
         </nav>
         <div className='w-[135px]'>

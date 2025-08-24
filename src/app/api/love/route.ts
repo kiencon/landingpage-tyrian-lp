@@ -1,4 +1,7 @@
+import { isLoggedIn } from '@/app/_layout/helper';
+import { addMoney } from '@/lib/backend/coin';
 import { createVietQR } from '@/lib/utils';
+import { ISession } from '@/type';
 import Nano from 'nano';
 import { nanoid } from 'nanoid';
 import { NextRequest, NextResponse } from 'next/server';
@@ -55,6 +58,47 @@ export async function POST(req: NextRequest) {
     };
 
     return NextResponse.json(result, { status: 200 });
+  } catch (err: any) {
+    console.error('Error in POST /api/payment:', err);
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PUT(req: NextRequest) {
+  try {
+    const admins = JSON.parse(
+      process.env.ADMINS || '[]'
+    ) as unknown as string[];
+    const isAuth = (await isLoggedIn()) as unknown as ISession;
+    const isAdmin = admins.includes(isAuth?.discordId);
+    if (!isAdmin) {
+      return NextResponse.json({ msg: 'forbidden' }, { status: 403 });
+    }
+
+    // Parse body JSON
+    const body = await req.json();
+    const { idCitizen, amount, discordID } = body as {
+      idCitizen: string;
+      amount: number;
+      discordID: string;
+    };
+
+    // Validate input
+    if (!idCitizen || !amount || isNaN(amount) || !discordID) {
+      return NextResponse.json(
+        {
+          error: 'Invalid payload. Must include id citizen and amount (number)',
+        },
+        { status: 400 }
+      );
+    }
+
+    await addMoney(discordID, idCitizen, amount);
+
+    return NextResponse.json({}, { status: 200 });
   } catch (err: any) {
     console.error('Error in POST /api/payment:', err);
     return NextResponse.json(
