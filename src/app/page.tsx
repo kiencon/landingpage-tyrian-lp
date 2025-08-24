@@ -97,40 +97,40 @@ const Home = () => {
           </div>
         </div>
         <div id='img1' className='lightbox' aria-hidden='true'>
-          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <a href='#_' className='lightbox__bg' aria-label='Đóng'></a>
           <div className='lightbox__content' role='dialog' aria-modal='true'>
             <img src='/1.png' alt='Ảnh 1 lớn' />
-            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+            <a href='#_' className='lightbox__close' aria-label='Đóng'>
               ✕
             </a>
           </div>
         </div>
 
         <div id='img2' className='lightbox' aria-hidden='true'>
-          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <a href='#_' className='lightbox__bg' aria-label='Đóng'></a>
           <div className='lightbox__content' role='dialog' aria-modal='true'>
             <img src='/2.png' alt='Ảnh 2 lớn' />
-            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+            <a href='#_' className='lightbox__close' aria-label='Đóng'>
               ✕
             </a>
           </div>
         </div>
 
         <div id='img3' className='lightbox' aria-hidden='true'>
-          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <a href='#_' className='lightbox__bg' aria-label='Đóng'></a>
           <div className='lightbox__content' role='dialog' aria-modal='true'>
             <img src='/3.png' alt='Ảnh 3 lớn' />
-            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+            <a href='#_' className='lightbox__close' aria-label='Đóng'>
               ✕
             </a>
           </div>
         </div>
 
         <div id='img4' className='lightbox' aria-hidden='true'>
-          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <a href='#_' className='lightbox__bg' aria-label='Đóng'></a>
           <div className='lightbox__content' role='dialog' aria-modal='true'>
             <img src='/4.png' alt='Ảnh 4 lớn' />
-            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+            <a href='#_' className='lightbox__close' aria-label='Đóng'>
               ✕
             </a>
           </div>

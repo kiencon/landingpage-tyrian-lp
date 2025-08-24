@@ -10,7 +10,7 @@ const Header = async () => {
   const isAuth = (await isLoggedIn()) as unknown as ISession;
   const isAdmin = admins.includes(isAuth?.discordId);
   return (
-    <header className='py-8'>
+    <header className='py-8 h-[160px]'>
       <div className='container-full flex items-center justify-around'>
         <div className='w-[135px]'>
           <h1 className='text-4xl text-white drop-shadow-[0_0_8px_#ac67c6] cursor-pointer'>

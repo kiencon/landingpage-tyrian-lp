@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 const Footer = () => (
-  <>
-    <div className='container-full py-24'>
+  <div>
+    <div className='container-full py-24 h-[360px]'>
       <h3 className='text-2xl text-white text-center'>
         Connection socially with Tyrian
       </h3>
@@ -23,7 +23,7 @@ const Footer = () => (
         2025 © All rights reserved
       </div>
     </footer>
-  </>
+  </div>
 );
 
 export default Footer;

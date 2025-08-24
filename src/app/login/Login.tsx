@@ -20,11 +20,9 @@ const LoginPage = () => {
       <div className='text-white container-full py-24 text-center'>
         <button
           onClick={() => signIn('discord', { callbackUrl })}
-          className='text-2xl cursor-pointer hover:text-purple-400'
+          className='text-[#cc94e5] hover:text-[#eabfec] uppercase border btn-coin btn-prallel'
         >
-          <span className='text-2xl p-4'>Welcome to Tyrian</span>
-          <br />
-          <span className='text-xl'>Sign in with Discord</span>
+          <span className='text-xl'>Đăng nhập bằng Discord</span>
         </button>
       </div>
     );
@@ -37,7 +35,7 @@ const LoginPage = () => {
     : undefined;
 
   return (
-    <main style={{ padding: 24 }}>
+    <main className='main' style={{ padding: 24 }}>
       <h1>Signed in</h1>
       <p>User: {s.username}</p>
       {avatarUrl && <img src={avatarUrl} alt='avatar' width={64} height={64} />}

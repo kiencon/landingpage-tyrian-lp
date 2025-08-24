@@ -19,7 +19,7 @@ export default function RootLayout({
         className={`antialiased relative min-h-screen bg-tyrian-hero text-white`}
       >
         <Header />
-        <main className=''>{children}</main>
+        <main className='main'>{children}</main>
         <Footer />
       </body>
     </html>

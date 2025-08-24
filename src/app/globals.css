@@ -415,3 +415,7 @@ body {
     height: 220px;
   }
 }
+
+.main {
+  min-height: calc(100vh - 160px - 508px);
+}
