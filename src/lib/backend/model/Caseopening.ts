@@ -1,8 +1,10 @@
 import sequelize, { DataTypes, Model } from './connection';
 
 class CaseOpening extends Model {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [x: string]: any;
 }
+
 CaseOpening.init(
   {
     id: {

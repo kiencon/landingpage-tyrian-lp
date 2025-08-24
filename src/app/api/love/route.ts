@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
     };
 
     return NextResponse.json(result, { status: 200 });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Error in POST /api/payment:', err);
     return NextResponse.json(
       { error: 'Internal server error' },
@@ -99,7 +99,7 @@ export async function PUT(req: NextRequest) {
     await addMoney(discordID, idCitizen, amount);
 
     return NextResponse.json({}, { status: 200 });
-  } catch (err: any) {
+  } catch (err) {
     console.error('Error in POST /api/payment:', err);
     return NextResponse.json(
       { error: 'Internal server error' },

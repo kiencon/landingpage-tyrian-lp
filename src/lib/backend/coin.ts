@@ -24,7 +24,7 @@ export const addMoney = async (
 
   return connection.transaction(
     { isolationLevel: Transaction.ISOLATION_LEVELS.REPEATABLE_READ },
-    async (t: any) => {
+    async (t: Transaction) => {
       const row = await CaseOpening.findOne({
         where: { citizenid: idCitizen },
         transaction: t,
