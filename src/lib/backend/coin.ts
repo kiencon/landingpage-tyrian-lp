@@ -11,6 +11,15 @@ export const findHistoryByDiscordId = (discordId: string) => {
   });
 };
 
+export const findHistory = (page: number = 0) => {
+  return CoinHistory.findAll({
+    order: [['createdAt', 'DESC']],
+    limit: 100,
+    offset: page * 100,
+    raw: true,
+  });
+};
+
 export const addMoney = async (
   discordId: string,
   idCitizen: string,

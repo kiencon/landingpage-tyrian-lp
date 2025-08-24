@@ -1,5 +1,8 @@
 import AddedCoin from '@/components/AddedCoint';
+import HistoryPage from '@/components/HistoryPage';
 import { authOptions } from '@/lib/authOptions';
+import { findHistory } from '@/lib/backend/coin';
+import { IHistory } from '@/type';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
@@ -13,9 +16,13 @@ export default async function Dashboard() {
       redirect(`/login?callbackUrl=${encodeURIComponent('/coin')}`);
     }
   }
+
+  const data = (await findHistory()) as unknown as IHistory[];
+
   return (
     <div className='text-3xl text-white text-center'>
       <AddedCoin />
+      <HistoryPage data={data} />
     </div>
   );
 }
