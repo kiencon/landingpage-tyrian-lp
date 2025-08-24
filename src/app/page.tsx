@@ -28,52 +28,50 @@ const Home = () => {
       <div className='h-24 transition-gradient'></div>
       <div className='bg-[#0e0618]'>
         <div className='flex justify-center items-center rounded-lg mx-auto relative container-full'>
-          <div className='w-full xl:w-1/2 z-10 container-full'>
+          <div className='w-full xl:w-1/2 z-20 container-full'>
             <div className='mx-auto px-8 rounded-3xl mb-2 relative w-full'>
-              <iframe
-                className='rounded-3xl'
-                width='100%'
-                height='350'
-                src='https://www.youtube.com/embed/AzyWvLxhurs?si=aXvyWUC0iesugOyf'
-                title='YouTube video player'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-              ></iframe>
-              <div className='grid grid-cols-2 gap-2 rounded-lg container container-two mx-auto px-8 mt-4'>
+              <div className='rounded-3xl w-full h-[350px] flex justify-center'>
+                <img src='/logo.webp' alt='logo' className='h-[350px]' />
+              </div>
+              <div
+                id='gallery'
+                className='grid grid-cols-2 gap-2 rounded-lg container container-two mx-auto px-8 mt-4'
+              >
                 <div className='relative group cursor-pointer'>
-                  <div className=''>
+                  <a className='' href='#img2'>
                     <img
                       src='/2.png'
                       className='object-cover rounded-tl-3xl'
                       alt='playgame'
                     ></img>
-                  </div>
+                  </a>
                 </div>
                 <div className='relative group cursor-pointer'>
-                  <div className=''>
+                  <a className='' href='#img3'>
                     <img
                       src='/3.png'
                       className='object-cover rounded-tr-3xl'
                       alt='playgame'
                     ></img>
-                  </div>
+                  </a>
                 </div>
                 <div className='relative group cursor-pointer'>
-                  <div className=''>
+                  <a className='' href='#img4'>
                     <img
                       src='/4.png'
                       className='object-cover rounded-bl-3xl'
                       alt='playgame'
                     ></img>
-                  </div>
+                  </a>
                 </div>
                 <div className='relative group cursor-pointer'>
-                  <div className=''>
+                  <a className='' href='#img1'>
                     <img
                       src='/1.png'
                       className='object-cover rounded-br-3xl'
                       alt='playgame'
                     ></img>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -96,6 +94,45 @@ const Home = () => {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+        <div id='img1' className='lightbox' aria-hidden='true'>
+          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <div className='lightbox__content' role='dialog' aria-modal='true'>
+            <img src='/1.png' alt='Ảnh 1 lớn' />
+            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+              ✕
+            </a>
+          </div>
+        </div>
+
+        <div id='img2' className='lightbox' aria-hidden='true'>
+          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <div className='lightbox__content' role='dialog' aria-modal='true'>
+            <img src='/2.png' alt='Ảnh 2 lớn' />
+            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+              ✕
+            </a>
+          </div>
+        </div>
+
+        <div id='img3' className='lightbox' aria-hidden='true'>
+          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <div className='lightbox__content' role='dialog' aria-modal='true'>
+            <img src='/3.png' alt='Ảnh 3 lớn' />
+            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+              ✕
+            </a>
+          </div>
+        </div>
+
+        <div id='img4' className='lightbox' aria-hidden='true'>
+          <a href='#gallery' className='lightbox__bg' aria-label='Đóng'></a>
+          <div className='lightbox__content' role='dialog' aria-modal='true'>
+            <img src='/4.png' alt='Ảnh 4 lớn' />
+            <a href='#gallery' className='lightbox__close' aria-label='Đóng'>
+              ✕
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from 'react';
@@ -11,19 +10,22 @@ const images = [
 ];
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
   const [displayLogo, setDisplayLogo] = useState(false);
   return (
     <div className='hero'>
       <div
         className='bg cursor-pointer'
-        style={{ filter: displayLogo ? 'none' : 'saturate(0) brightness(30%)' }}
+        style={{ filter: isHovered ? 'none' : 'saturate(0) brightness(30%)' }}
       ></div>
       <div className='container-full'>
         <section className='pt-48'>
           <div
             onMouseEnter={() => {
+              setIsHovered(true);
               setDisplayLogo(true);
             }}
+            onMouseLeave={() => setIsHovered(false)}
             className='relative flex justify-around'
           >
             {images.map((e, i) => (
@@ -33,8 +35,10 @@ const Hero = () => {
                     i === 1 || i === 2 ? 'absolute w-full -top-[50px]' : ''
                   }`}
                   onMouseEnter={() => {
+                    setIsHovered(true);
                     setDisplayLogo(true);
                   }}
+                  onMouseLeave={() => setIsHovered(false)}
                   style={{
                     transition: '.5s',
                     filter: displayLogo
@@ -49,15 +53,12 @@ const Hero = () => {
             ))}
           </div>
           <div
-            style={{
-              transition: '0.5s',
-              bottom: `${displayLogo ? '-150px' : '-300px'}`,
-            }}
-            className={`absolute left-[50%] -translate-x-[50%] ease-in ${
+            style={{ transition: '0.5s', bottom: `${displayLogo ? '0' : ''}` }}
+            className={`absolute -bottom-[30px] left-[50%] -translate-x-[50%] ease-in ${
               displayLogo ? '' : 'opacity-0'
             }`}
           >
-            <img src='/logo.webp' alt='logo' width={400} height={'auto'} />
+            <img src='/logo.webp' alt='logo' width={300} height={'auto'} />
           </div>
         </section>
       </div>
