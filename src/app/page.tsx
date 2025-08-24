@@ -83,14 +83,14 @@ const Home = () => {
                 <span>Tyrian</span>
                 <span>
                   {' '}
-                  Tyrian mở ra một hành trình mới ở Los Santos, nơi bạn được
-                  bước chân vào một thế giới ảo sống động như đời thật. Tại đây,
-                  bạn có thể thử sức ở bất kỳ vai trò nào: từ doanh nhân thành
-                  đạt, tài xế rong ruổi khắp phố, công nhân bình dị, đến
-                  gangster nguy hiểm hay cảnh sát bảo vệ trật tự. Mọi lựa chọn
-                  đều nằm trong tay bạn – không có giới hạn, không có kịch bản
-                  cố định. Hãy tự mình vẽ nên câu chuyện, xây dựng số phận và để
-                  dấu ấn riêng trong thành phố Los Santos tại Tyrian!
+                  mở ra một hành trình mới ở Los Santos, nơi bạn được bước chân
+                  vào một thế giới ảo sống động như đời thật. Tại đây, bạn có
+                  thể thử sức ở bất kỳ vai trò nào: từ doanh nhân thành đạt, tài
+                  xế rong ruổi khắp phố, công nhân bình dị, đến gangster nguy
+                  hiểm hay cảnh sát bảo vệ trật tự. Mọi lựa chọn đều nằm trong
+                  tay bạn – không có giới hạn, không có kịch bản cố định. Hãy tự
+                  mình vẽ nên câu chuyện, xây dựng số phận và để dấu ấn riêng
+                  trong thành phố Los Santos tại Tyrian!
                 </span>
               </div>
             </div>
