@@ -57,6 +57,10 @@ const Hero = () => {
             className={`absolute -bottom-[30px] left-[50%] -translate-x-[50%] ease-in ${
               displayLogo ? '' : 'opacity-0'
             }`}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => setIsHovered(false)}
           >
             <img src='/logo.webp' alt='logo' width={300} height={'auto'} />
           </div>
