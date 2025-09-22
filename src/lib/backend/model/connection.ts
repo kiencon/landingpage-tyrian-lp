@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
   {
     host: 'localhost',
     port: 3307,
-    dialect: 'mysql',
+    dialect: 'mariadb',
     dialectModule: mysql2,
     logging: false,
     pool: {
